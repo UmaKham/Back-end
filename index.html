@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Ysabeau+Infant:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Table Todo List</title>
+</head>
+<body>
+  
+  <main>
+    <div class="container">
+      <div class="title">
+        <h1>Dashboard</h1>
+        <button class="add">Добавить задачу</button>
+      </div>
+
+      <div class="view_box">
+        <p>Показать задачи как:</p>
+        <a class="btn-a active" href="#">Таблица</a>
+        <a class="btn-a" href="#">Плитка</a>
+      </div>
+    </div>
+  </main>
+
+  <article>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th id="task_title">Заголовок задачи</th>
+            <th id="task_description">Описание задачи</th>
+            <th id="date">Дата</th>
+            <th id="time">Время</th>
+            <th id="success">Выполнено</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Переписать проект на Vue 3</td>
+            <td>Quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</td>
+            <td>21.10.2021</td>
+            <td>14:31</td>
+            <td>Не выполнено</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <div class="bg hide" data-close>
+    <div class="modal">
+      <form action="form" name="user_form">
+        <h1>Добавление задачи</h1>
+        <label for="task_title">Заголовок</label>
+        <input type="text" name="task_title">
+  
+        <label for="task_description">Описание</label>
+        <input type="text" name="task_description">
+        
+        <label for="time">Время</label>
+        <input type="time" name="time">
+  
+        <label for="date">Дата</label>
+        <input type="date" name="date">
+  
+        <label for="task_type">Тип задачи</label>
+        <input name="task_type" list="task_type">
+        <datalist id="task_type">
+          <option value="Выполнено"></option>
+          <option value="Не выполнено"></option>
+        </datalist>
+        <button class="modal_add">Добавить</button>
+        <button class="change hide">Изменить</button>
+        <button type="button" class="modal_cancel" data-close>Отменить</button>
+      </form>
+    </div>
+  </div>
+
+  <article>
+    <div class="container">
+      <div class="list_box">
+        <div class="box">
+          <div class="item_top">
+            <h6>Переписать проект на Vue3</h6>
+            <div class="pencil"></div>
+            <div class="delete"></div>
+          </div>
+          <hr>
+          <p class="description">Quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</p>
+          <hr>
+          <div class="date_box">
+            <span>Не выполнено</span>
+            <div class="date_time">
+              <span>21.10.2021</span>
+              <span>14:31</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <script src="./script/script.js"></script>
+</body>
+</html>
